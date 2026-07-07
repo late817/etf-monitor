@@ -28,7 +28,7 @@ jobs:
           playwright install --with-deps chromium
 
       - name: 執行抓取
-        run: python scraper/main.py
+        run: python main.py
 
       - name: 提交更新後的資料
         run: |
