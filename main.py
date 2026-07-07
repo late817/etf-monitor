@@ -201,11 +201,13 @@ def scrape_fund(browser, fund, issuer_cfg, timeout_s):
 
 
 def main():
-    import os
-current_dir = os.path.dirname(os.path.abspath(__file__))
-config_path = os.path.join(current_dir, "config.yaml")
-cfg = yaml.safe_load(open(config_path, encoding="utf-8"))
-    settings = cfg.get("settings", {})
+   import os
+import yaml
+try:
+    cfg = yaml.safe_load(open("config.yaml", encoding="utf-8"))
+except FileNotFoundError:
+    cfg = yaml.safe_load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.yaml"), encoding="utf-8"))
+settings = cfg.get("settings", {})
     stale_days = int(settings.get("stale_after_days", 4))
     timeout_s = int(settings.get("timeout_seconds", 45))
     today = datetime.now(TPE).date()
