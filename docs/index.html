@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>主動式ETF透視台</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E141D; --panel:#161E2A; --panel2:#1D2735; --line:#2A3646;
+  --text:#E8EDF4; --muted:#8A97A8; --red:#E5484D; --red-deep:#7A1B22;
+  --fresh:#3DDC97; --warn:#F5A524; --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ink);color:var(--text);font-family:'Noto Sans TC',sans-serif;line-height:1.55;padding-bottom:80px}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+header{border-bottom:1px solid var(--line);padding:26px 0 18px;margin-bottom:24px}
+.brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+h1{font-size:26px;font-weight:900;letter-spacing:.06em}
+h1 .a{color:var(--red)}
+.gen{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.sub{color:var(--muted);font-size:13px;margin-top:6px}
+.banner{background:var(--red-deep);border:1px solid var(--red);border-radius:8px;padding:10px 14px;font-size:13px;margin-bottom:18px}
+h2{font-size:15px;font-weight:700;letter-spacing:.12em;color:var(--muted);margin:30px 0 12px;text-transform:uppercase}
+h2::before{content:"▮";color:var(--red);margin-right:8px}
+/* 狀態列 */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;transition:border-color .15s}
+.chip:hover{border-color:var(--red)}
+.chip .c{font-family:var(--mono);font-weight:600;font-size:13px}
+.chip .n{font-size:12px;color:var(--muted)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px}
+.dot.ok{background:var(--fresh)} .dot.stale{background:var(--warn)} .dot.error{background:var(--red)}
+.chip .d{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:2px}
+/* 矩陣 */
+.matrix-scroll{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+table.mx{border-collapse:collapse;font-family:var(--mono);font-size:12px;margin:0 auto}
+.mx th{color:var(--muted);font-weight:500;padding:4px 6px;font-size:11px}
+.mx th.row{text-align:right;white-space:nowrap}
+.mx td{width:52px;height:36px;text-align:center;border:1px solid var(--ink);cursor:pointer;font-weight:600;transition:outline .1s}
+.mx td:hover{outline:2px solid var(--text)}
+.mx td.diag{color:var(--muted);cursor:default;background:var(--panel2)!important}
+.legend{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:12px;color:var(--muted)}
+.grad{height:10px;width:160px;border-radius:5px;background:linear-gradient(90deg,var(--panel2),var(--red))}
+/* 面板 */
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:16px}
+.panel h3{font-size:16px;margin-bottom:4px}
+.panel .meta{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:12px}
+table.hold{width:100%;border-collapse:collapse;font-size:13px}
+.hold th{color:var(--muted);font-weight:500;text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);font-size:12px}
+.hold td{padding:6px 8px;border-bottom:1px solid #222D3C}
+.hold td.num,.hold th.num{text-align:right;font-family:var(--mono)}
+.bar{height:5px;background:var(--red);border-radius:3px;min-width:2px}
+.cashrow{color:var(--muted);font-style:italic}
+select{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-family:inherit;font-size:14px}
+.err{color:var(--warn);font-size:13px}
+footer{margin-top:48px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:16px}
+@media(max-width:640px){h1{font-size:21px}.mx td{width:40px;height:30px;font-size:10px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brand"><h1>主動式ETF<span class="a">透視台</span></h1><span class="gen" id="gen"></span></div>
+  <div class="sub">資料來源：各投信官網每日法定揭露之全部持股。綠點＝最新、黃點＝過期、紅點＝抓取失敗。</div>
+</div></header>
+<div class="wrap">
+  <div id="banner"></div>
+
+  <h2>資料狀態</h2>
+  <div class="chips" id="chips"></div>
+
+  <h2>兩兩重疊度矩陣</h2>
+  <div class="matrix-scroll"><table class="mx" id="mx"></table>
+    <div class="legend"><span>0%</span><div class="grad"></div><span>高重疊</span><span style="margin-left:auto">重疊度 = Σ min(權重A, 權重B)，點任一格看共同持股</span></div>
+  </div>
+  <div id="pair"></div>
+
+  <h2>單檔持股明細</h2>
+  <div class="panel">
+    <select id="fundSel" onchange="renderFund(this.value)"></select>
+    <div id="fundDetail"></div>
+  </div>
+
+  <footer>本平台僅整理公開揭露資訊供個人研究，非投資建議。程式異常時，將「資料狀態」區的紅點基金與 <a href="data/report.json">診斷報告</a> 內容貼給 Claude 即可修復。</footer>
+</div>
+<script>
+let DATA=null, MAP={};
+const fmt=n=>n==null?'—':n.toLocaleString('zh-TW',{maximumFractionDigits:2});
+
+fetch('data/latest.json?t='+Date.now()).then(r=>r.json()).then(d=>{DATA=d;init();})
+  .catch(()=>{document.getElementById('banner').innerHTML='<div class="banner">讀不到資料檔 data/latest.json — 請先到 Actions 手動執行一次「每日更新持股資料」。</div>';});
+
+function init(){
+  document.getElementById('gen').textContent='更新於 '+DATA.generated_at;
+  if(DATA.demo) document.getElementById('banner').innerHTML='<div class="banner">目前顯示的是示範資料。到 GitHub 的 Actions 分頁手動執行一次工作流，即會換成真實持股。</div>';
+  for(const f of DATA.funds){ MAP[f.etf]={}; for(const h of f.holdings){ if(!h.cash_like) MAP[f.etf][h.code||h.name]=h; } }
+  renderChips(); renderMatrix();
+  const ok=DATA.funds.filter(f=>f.status!=='error');
+  const sel=document.getElementById('fundSel');
+  sel.innerHTML=ok.map(f=>`<option value="${f.etf}">${f.etf}　${f.name}</option>`).join('');
+  if(ok.length) renderFund(ok[0].etf);
+}
+
+function renderChips(){
+  document.getElementById('chips').innerHTML=DATA.funds.map(f=>`
+    <div class="chip" onclick="selectFund('${f.etf}')">
+      <div class="c"><span class="dot ${f.status}"></span>${f.etf}</div>
+      <div class="n">${f.name}・${f.issuer}</div>
+      <div class="d">${f.status==='error'?'抓取失敗':'資料日 '+(f.data_date||'?')+'・'+f.holdings.length+'檔'}</div>
+    </div>`).join('');
+}
+
+function overlap(a,b){
+  let s=0; const A=MAP[a],B=MAP[b];
+  for(const k in A){ if(B[k]) s+=Math.min(A[k].weight,B[k].weight); }
+  return s;
+}
+
+function renderMatrix(){
+  const fs=DATA.funds.filter(f=>f.status!=='error'&&f.holdings.length);
+  if(fs.length<2){document.getElementById('mx').innerHTML='<tr><td class="err" style="border:0;width:auto">成功抓到的基金不足兩檔，暫無法計算矩陣。</td></tr>';return;}
+  let max=1; const vals={};
+  for(let i=0;i<fs.length;i++)for(let j=i+1;j<fs.length;j++){const v=overlap(fs[i].etf,fs[j].etf);vals[i+'_'+j]=v;if(v>max)max=v;}
+  let html='<tr><th></th>'+fs.map(f=>`<th>${f.etf}</th>`).join('')+'</tr>';
+  for(let i=0;i<fs.length;i++){
+    html+=`<tr><th class="row">${fs[i].etf}</th>`;
+    for(let j=0;j<fs.length;j++){
+      if(i===j){html+='<td class="diag">—</td>';continue;}
+      const v=vals[Math.min(i,j)+'_'+Math.max(i,j)];
+      const t=Math.min(v/max,1);
+      const bg=`rgba(229,72,77,${(0.06+0.94*t).toFixed(2)})`;
+      const col=t>0.55?'#fff':'var(--text)';
+      html+=`<td style="background:${bg};color:${col}" onclick="renderPair('${fs[i].etf}','${fs[j].etf}')">${v.toFixed(0)}</td>`;
+    }
+    html+='</tr>';
+  }
+  document.getElementById('mx').innerHTML=html;
+}
+
+function renderPair(a,b){
+  const A=MAP[a],B=MAP[b],fa=DATA.funds.find(f=>f.etf===a),fb=DATA.funds.find(f=>f.etf===b);
+  const rows=[];
+  for(const k in A){ if(B[k]) rows.push({k,name:A[k].name||B[k].name,wa:A[k].weight,wb:B[k].weight,m:Math.min(A[k].weight,B[k].weight)}); }
+  rows.sort((x,y)=>y.m-x.m);
+  const tot=rows.reduce((s,r)=>s+r.m,0);
+  document.getElementById('pair').innerHTML=`<div class="panel">
+    <h3>${a} × ${b} 共同持股</h3>
+    <div class="meta">${fa.name} vs ${fb.name}・重疊 ${rows.length} 檔・重疊度 ${tot.toFixed(1)}%</div>
+    <table class="hold"><tr><th>代碼</th><th>名稱</th><th class="num">${a} 權重%</th><th class="num">${b} 權重%</th><th class="num">重疊%</th></tr>
+    ${rows.map(r=>`<tr><td style="font-family:var(--mono)">${r.k}</td><td>${r.name}</td><td class="num">${r.wa.toFixed(2)}</td><td class="num">${r.wb.toFixed(2)}</td><td class="num">${r.m.toFixed(2)}</td></tr>`).join('')}
+    </table></div>`;
+  document.getElementById('pair').scrollIntoView({behavior:'smooth'});
+}
+
+function selectFund(code){
+  const f=DATA.funds.find(x=>x.etf===code);
+  if(f.status==='error'){alert(code+' 抓取失敗：'+(f.error||''));return;}
+  document.getElementById('fundSel').value=code; renderFund(code);
+  document.getElementById('fundDetail').scrollIntoView({behavior:'smooth'});
+}
+
+function renderFund(code){
+  const f=DATA.funds.find(x=>x.etf===code);
+  const hs=[...f.holdings].sort((a,b)=>b.weight-a.weight);
+  const maxw=Math.max(...hs.map(h=>h.weight),1);
+  document.getElementById('fundDetail').innerHTML=`
+    <div class="meta" style="margin-top:12px">${f.issuer}・資料日期 ${f.data_date||'?'}・共 ${hs.length} 檔・<a href="${f.source_url}" target="_blank" rel="noopener">官網來源 ↗</a></div>
+    <table class="hold"><tr><th>#</th><th>代碼</th><th>名稱</th><th class="num">股數</th><th class="num">權重%</th><th style="width:26%"></th></tr>
+    ${hs.map((h,i)=>`<tr class="${h.cash_like?'cashrow':''}"><td class="num">${i+1}</td><td style="font-family:var(--mono)">${h.code}</td><td>${h.name}</td><td class="num">${fmt(h.shares)}</td><td class="num">${h.weight.toFixed(2)}</td><td><div class="bar" style="width:${(h.weight/maxw*100).toFixed(1)}%"></div></td></tr>`).join('')}
+    </table>`;
+}
+</script>
+</body>
+</html>

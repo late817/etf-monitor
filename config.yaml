@@ -1,0 +1,83 @@
+# ============================================================
+# 台股主動式ETF 持股監控 — 設定檔（第一階段：6家投信 / 10檔）
+# 要新增ETF：在 funds 底下照格式加一行即可。
+# url 留空代表由程式自動到該投信的 list_url 探索連結。
+# ============================================================
+
+settings:
+  # 資料超過幾個「日曆日」視為過期（跨週末所以給4天緩衝）
+  stale_after_days: 4
+  # 每個網站的載入等待秒數上限
+  timeout_seconds: 45
+
+issuers:
+  yuanta:
+    name: 元大投信
+    url_template: "https://www.yuantaetfs.com/product/detail/{code}/ratio"
+    wait_for: "table"
+  nomura:
+    name: 野村投信
+    url_template: "https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo={code}&tab=Shareholding"
+    wait_for: "table"
+  fhtrust:
+    name: 復華投信
+    list_url: "https://www.fhtrust.com.tw/ETF"
+    click_texts: ["持股權重", "投資組合", "持股明細", "基金持股"]
+    wait_for: "table"
+  ezmoney:
+    name: 統一投信
+    list_url: "https://www.ezmoney.com.tw/ETF"
+    click_texts: ["持股明細", "投資組合", "持股權重", "申購買回清單"]
+    wait_for: "table"
+  capitalfund:
+    name: 群益投信
+    list_url: "https://www.capitalfund.com.tw/etf"
+    click_texts: ["投資組合", "持股明細", "持股權重"]
+    wait_for: "table"
+  allianz:
+    name: 安聯投信
+    list_url: "https://www.allianzgi.com.tw"
+    click_texts: ["持股明細", "投資組合", "每日持股"]
+    wait_for: "table"
+
+funds:
+  - code: 00981A
+    name: 主動統一台股增長
+    issuer: ezmoney
+    url: "https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=49YTW"
+  - code: 00988A
+    name: 主動統一全球創新
+    issuer: ezmoney
+    url: ""
+  - code: 00403A
+    name: 主動統一升級50
+    issuer: ezmoney
+    url: ""
+  - code: 00991A
+    name: 主動復華未來50
+    issuer: fhtrust
+    url: "https://www.fhtrust.com.tw/ETF/etf_detail/ETF23"
+  - code: 00990A
+    name: 主動元大AI新經濟
+    issuer: yuanta
+    url: ""
+  - code: 00984A
+    name: 主動安聯台灣高息
+    issuer: allianz
+    url: ""
+  - code: 00980A
+    name: 主動野村臺灣優選
+    issuer: nomura
+    url: ""
+  - code: 00985A
+    name: 主動野村台灣50
+    issuer: nomura
+    url: ""
+  - code: 00982A
+    name: 主動群益台灣強棒
+    issuer: capitalfund
+    url: "https://www.capitalfund.com.tw/etf/product/detail/399/basic"
+  - code: 00992A
+    name: 主動群益科技創新
+    issuer: capitalfund
+    url: ""
