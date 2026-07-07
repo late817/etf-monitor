@@ -14,7 +14,8 @@ from pathlib import Path
 import yaml
 from playwright.sync_api import sync_playwright
 
-ROOT = Path(__file__).resolve().parent.parent
+_here = Path(__file__).resolve().parent
+ROOT = _here if (_here / "config.yaml").exists() else _here.parent
 TPE = timezone(timedelta(hours=8))
 
 DATE_PATTERNS = [
