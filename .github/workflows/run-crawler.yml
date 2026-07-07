@@ -1,0 +1,39 @@
+name: Update ETF Data
+
+on:
+  workflow_dispatch: # 讓您可以手動點擊按鈕執行
+  schedule:
+    - cron: '0 9 * * 1-5' # 台北時間每週一至週五下午 5:00 自動執行 (UTC 9:00)
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 檢查程式碼
+      uses: actions/checkout@v4
+
+    - name: 設定 Python 環境
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: 安裝必要套件
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: 執行投信官網資料抓取爬蟲
+      run: python main.py
+
+    - name: 提交並推送更新後的資料
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A
+        if ! git diff --cached --quiet; then
+          git commit -m "更新投信官網最新持股資料"
+          git push
+        else
+          echo "資料已是最新，無需更新。"
+        fi
