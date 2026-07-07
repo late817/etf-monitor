@@ -1,0 +1,39 @@
+name: 每日更新持股資料
+
+on:
+  schedule:
+    # UTC 10:30 = 台北時間 18:30，週一至週五
+    - cron: "30 10 * * 1-5"
+  workflow_dispatch: {}   # 允許手動觸發
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: 取出程式碼
+        uses: actions/checkout@v4
+
+      - name: 安裝 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安裝套件
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: 執行抓取
+        run: python scraper/main.py
+
+      - name: 提交更新後的資料
+        run: |
+          git config user.name "etf-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add docs/data/
+          git diff --cached --quiet || git commit -m "資料更新 $(TZ=Asia/Taipei date +'%Y-%m-%d %H:%M')"
+          git push
