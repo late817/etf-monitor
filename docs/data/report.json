@@ -1,0 +1,96 @@
+{
+ "run_at": "2026-07-07 23:59",
+ "summary": "4/10 檔成功",
+ "details": [
+  {
+   "etf": "00981A",
+   "issuer": "統一投信",
+   "status": "ok",
+   "data_date": null,
+   "count": 35,
+   "url": "https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=49YTW",
+   "error": null
+  },
+  {
+   "etf": "00988A",
+   "issuer": "統一投信",
+   "status": "error",
+   "data_date": null,
+   "count": 0,
+   "url": "https://www.ezmoney.com.tw/ETF/News/Info/14684?tid=101",
+   "error": "RuntimeError: 頁面上找不到符合持股明細特徵的表格"
+  },
+  {
+   "etf": "00403A",
+   "issuer": "統一投信",
+   "status": "error",
+   "data_date": null,
+   "count": 0,
+   "url": "https://www.ezmoney.com.tw/ETF/News/Info/14665?tid=101",
+   "error": "RuntimeError: 頁面上找不到符合持股明細特徵的表格"
+  },
+  {
+   "etf": "00991A",
+   "issuer": "復華投信",
+   "status": "ok",
+   "data_date": "2026-07-07",
+   "count": 10,
+   "url": "https://www.fhtrust.com.tw/ETF/etf_detail/ETF23",
+   "error": null
+  },
+  {
+   "etf": "00990A",
+   "issuer": "元大投信",
+   "status": "error",
+   "data_date": null,
+   "count": 0,
+   "url": "https://www.yuantaetfs.com/product/detail/00990A/ratio",
+   "error": "RuntimeError: 頁面上找不到符合持股明細特徵的表格"
+  },
+  {
+   "etf": "00984A",
+   "issuer": "安聯投信",
+   "status": "error",
+   "data_date": null,
+   "count": 0,
+   "url": null,
+   "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\nnavigating to \"https://www.allianzgi.com.tw/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+   "etf": "00980A",
+   "issuer": "野村投信",
+   "status": "ok",
+   "data_date": null,
+   "count": 10,
+   "url": "https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo=00980A&tab=Shareholding",
+   "error": null
+  },
+  {
+   "etf": "00985A",
+   "issuer": "野村投信",
+   "status": "ok",
+   "data_date": null,
+   "count": 10,
+   "url": "https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo=00985A&tab=Shareholding",
+   "error": null
+  },
+  {
+   "etf": "00982A",
+   "issuer": "群益投信",
+   "status": "error",
+   "data_date": null,
+   "count": 0,
+   "url": "https://www.capitalfund.com.tw/etf/product/detail/399/basic",
+   "error": "RuntimeError: 頁面上找不到符合持股明細特徵的表格"
+  },
+  {
+   "etf": "00992A",
+   "issuer": "群益投信",
+   "status": "error",
+   "data_date": null,
+   "count": 0,
+   "url": "https://www.capitalfund.com.tw/etf/product/detail/500/basic",
+   "error": "RuntimeError: 頁面上找不到符合持股明細特徵的表格"
+  }
+ ]
+}

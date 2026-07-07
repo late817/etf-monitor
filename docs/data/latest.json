@@ -1,22 +1,565 @@
 {
- "generated_at": "尚未執行",
- "demo": true,
+ "generated_at": "2026-07-07 23:59",
+ "demo": false,
  "funds": [
-  {"etf": "00981A", "name": "主動統一台股增長", "issuer": "統一投信", "status": "ok", "data_date": "2026-07-06", "source_url": "https://www.ezmoney.com.tw/ETF", "error": null,
+  {
+   "etf": "00981A",
+   "name": "主動統一台股增長",
+   "issuer": "統一投信",
+   "status": "ok",
+   "data_date": null,
    "holdings": [
-    {"code": "2330", "name": "台積電", "shares": 12000000, "weight": 18.5, "cash_like": false},
-    {"code": "2454", "name": "聯發科", "shares": 900000, "weight": 6.2, "cash_like": false},
-    {"code": "2383", "name": "台光電", "shares": 1200000, "weight": 5.1, "cash_like": false},
-    {"code": "3017", "name": "奇鋐", "shares": 800000, "weight": 4.4, "cash_like": false},
-    {"code": "2345", "name": "智邦", "shares": 700000, "weight": 3.9, "cash_like": false}
-   ]},
-  {"etf": "00991A", "name": "主動復華未來50", "issuer": "復華投信", "status": "ok", "data_date": "2026-07-06", "source_url": "https://www.fhtrust.com.tw/ETF/etf_detail/ETF23", "error": null,
+    {
+     "code": "2330",
+     "name": "台積電",
+     "shares": 11960000.0,
+     "weight": 10.77,
+     "cash_like": false
+    },
+    {
+     "code": "2383",
+     "name": "台光電",
+     "shares": 4597000.0,
+     "weight": 8.86,
+     "cash_like": false
+    },
+    {
+     "code": "2327",
+     "name": "國巨*",
+     "shares": 25098000.0,
+     "weight": 8.38,
+     "cash_like": false
+    },
+    {
+     "code": "2454",
+     "name": "聯發科",
+     "shares": 5131000.0,
+     "weight": 7.63,
+     "cash_like": false
+    },
+    {
+     "code": "2345",
+     "name": "智邦",
+     "shares": 6334000.0,
+     "weight": 5.74,
+     "cash_like": false
+    },
+    {
+     "code": "6223",
+     "name": "旺矽",
+     "shares": 2382000.0,
+     "weight": 5.55,
+     "cash_like": false
+    },
+    {
+     "code": "2303",
+     "name": "聯電",
+     "shares": 86550000.0,
+     "weight": 4.95,
+     "cash_like": false
+    },
+    {
+     "code": "3037",
+     "name": "欣興",
+     "shares": 15203000.0,
+     "weight": 4.71,
+     "cash_like": false
+    },
+    {
+     "code": "3017",
+     "name": "奇鋐",
+     "shares": 5191000.0,
+     "weight": 4.69,
+     "cash_like": false
+    },
+    {
+     "code": "6669",
+     "name": "緯穎",
+     "shares": 2417000.0,
+     "weight": 4.47,
+     "cash_like": false
+    },
+    {
+     "code": "3665",
+     "name": "貿聯-KY",
+     "shares": 4833848.0,
+     "weight": 3.53,
+     "cash_like": false
+    },
+    {
+     "code": "2308",
+     "name": "台達電",
+     "shares": 5052000.0,
+     "weight": 3.52,
+     "cash_like": false
+    },
+    {
+     "code": "2368",
+     "name": "金像電",
+     "shares": 8315000.0,
+     "weight": 3.48,
+     "cash_like": false
+    },
+    {
+     "code": "8046",
+     "name": "南電",
+     "shares": 8949000.0,
+     "weight": 3.4,
+     "cash_like": false
+    },
+    {
+     "code": "3711",
+     "name": "日月光投控",
+     "shares": 12742000.0,
+     "weight": 3.06,
+     "cash_like": false
+    },
+    {
+     "code": "6274",
+     "name": "台燿",
+     "shares": 5160000.0,
+     "weight": 3.0,
+     "cash_like": false
+    },
+    {
+     "code": "3653",
+     "name": "健策",
+     "shares": 2267000.0,
+     "weight": 2.67,
+     "cash_like": false
+    },
+    {
+     "code": "5274",
+     "name": "信驊",
+     "shares": 416900.0,
+     "weight": 2.22,
+     "cash_like": false
+    },
+    {
+     "code": "6805",
+     "name": "富世達",
+     "shares": 1811000.0,
+     "weight": 1.0,
+     "cash_like": false
+    },
+    {
+     "code": "8210",
+     "name": "勤誠",
+     "shares": 2267000.0,
+     "weight": 0.98,
+     "cash_like": false
+    },
+    {
+     "code": "6515",
+     "name": "穎崴",
+     "shares": 204000.0,
+     "weight": 0.6,
+     "cash_like": false
+    },
+    {
+     "code": "6187",
+     "name": "萬潤",
+     "shares": 1334000.0,
+     "weight": 0.48,
+     "cash_like": false
+    },
+    {
+     "code": "6147",
+     "name": "頎邦",
+     "shares": 6275000.0,
+     "weight": 0.46,
+     "cash_like": false
+    },
+    {
+     "code": "5439",
+     "name": "高技",
+     "shares": 3528000.0,
+     "weight": 0.43,
+     "cash_like": false
+    },
+    {
+     "code": "6510",
+     "name": "精測",
+     "shares": 411000.0,
+     "weight": 0.43,
+     "cash_like": false
+    },
+    {
+     "code": "6278",
+     "name": "台表科",
+     "shares": 4334000.0,
+     "weight": 0.31,
+     "cash_like": false
+    },
+    {
+     "code": "6271",
+     "name": "同欣電",
+     "shares": 2966000.0,
+     "weight": 0.27,
+     "cash_like": false
+    },
+    {
+     "code": "1590",
+     "name": "亞德客-KY",
+     "shares": 528000.0,
+     "weight": 0.27,
+     "cash_like": false
+    },
+    {
+     "code": "2449",
+     "name": "京元電子",
+     "shares": 1886000.0,
+     "weight": 0.22,
+     "cash_like": false
+    },
+    {
+     "code": "6191",
+     "name": "精成科",
+     "shares": 3988000.0,
+     "weight": 0.15,
+     "cash_like": false
+    },
+    {
+     "code": "3264",
+     "name": "欣銓",
+     "shares": 1508000.0,
+     "weight": 0.13,
+     "cash_like": false
+    },
+    {
+     "code": "3376",
+     "name": "新日興",
+     "shares": 1741000.0,
+     "weight": 0.12,
+     "cash_like": false
+    },
+    {
+     "code": "2002",
+     "name": "中鋼",
+     "shares": 5163000.0,
+     "weight": 0.04,
+     "cash_like": false
+    },
+    {
+     "code": "4966",
+     "name": "譜瑞-KY",
+     "shares": 140000.0,
+     "weight": 0.03,
+     "cash_like": false
+    },
+    {
+     "code": "6488",
+     "name": "環球晶",
+     "shares": 50000.0,
+     "weight": 0.02,
+     "cash_like": false
+    }
+   ],
+   "source_url": "https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=49YTW",
+   "error": null
+  },
+  {
+   "etf": "00988A",
+   "name": "主動統一全球創新",
+   "issuer": "統一投信",
+   "status": "error",
+   "data_date": null,
+   "holdings": [],
+   "source_url": "https://www.ezmoney.com.tw/ETF/News/Info/14684?tid=101",
+   "error": "RuntimeError: 頁面上找不到符合持股明細特徵的表格"
+  },
+  {
+   "etf": "00403A",
+   "name": "主動統一升級50",
+   "issuer": "統一投信",
+   "status": "error",
+   "data_date": null,
+   "holdings": [],
+   "source_url": "https://www.ezmoney.com.tw/ETF/News/Info/14665?tid=101",
+   "error": "RuntimeError: 頁面上找不到符合持股明細特徵的表格"
+  },
+  {
+   "etf": "00991A",
+   "name": "主動復華未來50",
+   "issuer": "復華投信",
+   "status": "ok",
+   "data_date": "2026-07-07",
    "holdings": [
-    {"code": "2330", "name": "台積電", "shares": 8000000, "weight": 12.1, "cash_like": false},
-    {"code": "2303", "name": "聯電", "shares": 30000000, "weight": 7.5, "cash_like": false},
-    {"code": "2383", "name": "台光電", "shares": 900000, "weight": 4.6, "cash_like": false},
-    {"code": "3037", "name": "欣興", "shares": 2000000, "weight": 4.0, "cash_like": false},
-    {"code": "2345", "name": "智邦", "shares": 500000, "weight": 2.8, "cash_like": false}
-   ]}
+    {
+     "code": "2330",
+     "name": "台灣積體",
+     "shares": 3800000.0,
+     "weight": 12.98,
+     "cash_like": false
+    },
+    {
+     "code": "2327",
+     "name": "國巨股份",
+     "shares": 6400000.0,
+     "weight": 8.108,
+     "cash_like": false
+    },
+    {
+     "code": "2383",
+     "name": "台光電子",
+     "shares": 1100000.0,
+     "weight": 8.038,
+     "cash_like": false
+    },
+    {
+     "code": "2454",
+     "name": "聯發科技",
+     "shares": 950000.0,
+     "weight": 5.36,
+     "cash_like": false
+    },
+    {
+     "code": "2408",
+     "name": "南亞科技",
+     "shares": 9000000.0,
+     "weight": 5.078,
+     "cash_like": false
+    },
+    {
+     "code": "6223",
+     "name": "旺矽科技",
+     "shares": 530000.0,
+     "weight": 4.682,
+     "cash_like": false
+    },
+    {
+     "code": "3037",
+     "name": "欣興電子",
+     "shares": 3900000.0,
+     "weight": 4.586,
+     "cash_like": false
+    },
+    {
+     "code": "8299",
+     "name": "群聯電子",
+     "shares": 1500000.0,
+     "weight": 4.504,
+     "cash_like": false
+    },
+    {
+     "code": "6274",
+     "name": "台燿科技",
+     "shares": 2000000.0,
+     "weight": 4.41,
+     "cash_like": false
+    },
+    {
+     "code": "2345",
+     "name": "智邦科技",
+     "shares": 1100000.0,
+     "weight": 3.781,
+     "cash_like": false
+    }
+   ],
+   "source_url": "https://www.fhtrust.com.tw/ETF/etf_detail/ETF23",
+   "error": null
+  },
+  {
+   "etf": "00990A",
+   "name": "主動元大AI新經濟",
+   "issuer": "元大投信",
+   "status": "error",
+   "data_date": null,
+   "holdings": [],
+   "source_url": "https://www.yuantaetfs.com/product/detail/00990A/ratio",
+   "error": "RuntimeError: 頁面上找不到符合持股明細特徵的表格"
+  },
+  {
+   "etf": "00984A",
+   "name": "主動安聯台灣高息",
+   "issuer": "安聯投信",
+   "status": "error",
+   "data_date": null,
+   "holdings": [],
+   "source_url": null,
+   "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\nnavigating to \"https://www.allianzgi.com.tw/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+   "etf": "00980A",
+   "name": "主動野村臺灣優選",
+   "issuer": "野村投信",
+   "status": "ok",
+   "data_date": null,
+   "holdings": [
+    {
+     "code": "2330",
+     "name": "台灣積體電路製造",
+     "shares": 634000.0,
+     "weight": 9.35,
+     "cash_like": false
+    },
+    {
+     "code": "2454",
+     "name": "聯發科技",
+     "shares": 269000.0,
+     "weight": 6.55,
+     "cash_like": false
+    },
+    {
+     "code": "2059",
+     "name": "川湖科技",
+     "shares": 110000.0,
+     "weight": 5.49,
+     "cash_like": false
+    },
+    {
+     "code": "2308",
+     "name": "台達電子工業",
+     "shares": 475000.0,
+     "weight": 5.43,
+     "cash_like": false
+    },
+    {
+     "code": "2383",
+     "name": "台光電子材料",
+     "shares": 151000.0,
+     "weight": 4.76,
+     "cash_like": false
+    },
+    {
+     "code": "7769",
+     "name": "鴻勁精密",
+     "shares": 93000.0,
+     "weight": 3.47,
+     "cash_like": false
+    },
+    {
+     "code": "3653",
+     "name": "健策精密工業",
+     "shares": 151000.0,
+     "weight": 2.92,
+     "cash_like": false
+    },
+    {
+     "code": "6223",
+     "name": "旺矽科技",
+     "shares": 76000.0,
+     "weight": 2.9,
+     "cash_like": false
+    },
+    {
+     "code": "3037",
+     "name": "欣興電子",
+     "shares": 562000.0,
+     "weight": 2.85,
+     "cash_like": false
+    },
+    {
+     "code": "2368",
+     "name": "金像電子（股）公司",
+     "shares": 393000.0,
+     "weight": 2.7,
+     "cash_like": false
+    }
+   ],
+   "source_url": "https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo=00980A&tab=Shareholding",
+   "error": null
+  },
+  {
+   "etf": "00985A",
+   "name": "主動野村台灣50",
+   "issuer": "野村投信",
+   "status": "ok",
+   "data_date": null,
+   "holdings": [
+    {
+     "code": "2330",
+     "name": "台灣積體電路製造",
+     "shares": 1096000.0,
+     "weight": 26.53,
+     "cash_like": false
+    },
+    {
+     "code": "2376",
+     "name": "技嘉科技",
+     "shares": 1064000.0,
+     "weight": 3.45,
+     "cash_like": false
+    },
+    {
+     "code": "6442",
+     "name": "光紅建聖",
+     "shares": 200000.0,
+     "weight": 3.06,
+     "cash_like": false
+    },
+    {
+     "code": "2059",
+     "name": "川湖科技",
+     "shares": 37000.0,
+     "weight": 3.03,
+     "cash_like": false
+    },
+    {
+     "code": "3661",
+     "name": "世芯電子",
+     "shares": 73000.0,
+     "weight": 2.92,
+     "cash_like": false
+    },
+    {
+     "code": "2395",
+     "name": "研華",
+     "shares": 545000.0,
+     "weight": 2.68,
+     "cash_like": false
+    },
+    {
+     "code": "3008",
+     "name": "大立光電",
+     "shares": 68000.0,
+     "weight": 2.62,
+     "cash_like": false
+    },
+    {
+     "code": "3036",
+     "name": "文曄科技",
+     "shares": 1111000.0,
+     "weight": 2.36,
+     "cash_like": false
+    },
+    {
+     "code": "4958",
+     "name": "臻鼎科技控股",
+     "shares": 413000.0,
+     "weight": 2.25,
+     "cash_like": false
+    },
+    {
+     "code": "2345",
+     "name": "智邦科技",
+     "shares": 92000.0,
+     "weight": 2.24,
+     "cash_like": false
+    }
+   ],
+   "source_url": "https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo=00985A&tab=Shareholding",
+   "error": null
+  },
+  {
+   "etf": "00982A",
+   "name": "主動群益台灣強棒",
+   "issuer": "群益投信",
+   "status": "error",
+   "data_date": null,
+   "holdings": [],
+   "source_url": "https://www.capitalfund.com.tw/etf/product/detail/399/basic",
+   "error": "RuntimeError: 頁面上找不到符合持股明細特徵的表格"
+  },
+  {
+   "etf": "00992A",
+   "name": "主動群益科技創新",
+   "issuer": "群益投信",
+   "status": "error",
+   "data_date": null,
+   "holdings": [],
+   "source_url": "https://www.capitalfund.com.tw/etf/product/detail/500/basic",
+   "error": "RuntimeError: 頁面上找不到符合持股明細特徵的表格"
+  }
  ]
 }
