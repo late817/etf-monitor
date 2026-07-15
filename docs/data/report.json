@@ -1,5 +1,5 @@
 {
- "run_at": "2026-07-14 23:59",
+ "run_at": "2026-07-16 00:10",
  "summary": "4/10 檔成功",
  "details": [
   {
@@ -33,7 +33,7 @@
    "etf": "00991A",
    "issuer": "復華投信",
    "status": "ok",
-   "data_date": "2026-07-14",
+   "data_date": "2026-07-15",
    "count": 10,
    "url": "https://www.fhtrust.com.tw/ETF/etf_detail/ETF23",
    "error": null
