@@ -1,5 +1,5 @@
 {
- "run_at": "2026-07-16 00:10",
+ "run_at": "2026-07-16 23:56",
  "summary": "4/10 檔成功",
  "details": [
   {
@@ -7,7 +7,7 @@
    "issuer": "統一投信",
    "status": "ok",
    "data_date": null,
-   "count": 35,
+   "count": 34,
    "url": "https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=49YTW",
    "error": null
   },
@@ -33,7 +33,7 @@
    "etf": "00991A",
    "issuer": "復華投信",
    "status": "ok",
-   "data_date": "2026-07-15",
+   "data_date": "2026-07-16",
    "count": 10,
    "url": "https://www.fhtrust.com.tw/ETF/etf_detail/ETF23",
    "error": null
