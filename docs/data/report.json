@@ -1,5 +1,5 @@
 {
- "run_at": "2026-07-22 00:08",
+ "run_at": "2026-07-23 00:08",
  "summary": "4/10 檔成功",
  "details": [
   {
@@ -7,7 +7,7 @@
    "issuer": "統一投信",
    "status": "ok",
    "data_date": null,
-   "count": 34,
+   "count": 36,
    "url": "https://www.ezmoney.com.tw/ETF/Fund/Info?fundCode=49YTW",
    "error": null
   },
@@ -33,7 +33,7 @@
    "etf": "00991A",
    "issuer": "復華投信",
    "status": "ok",
-   "data_date": "2026-07-21",
+   "data_date": "2026-07-22",
    "count": 10,
    "url": "https://www.fhtrust.com.tw/ETF/etf_detail/ETF23",
    "error": null
@@ -89,8 +89,8 @@
    "status": "error",
    "data_date": null,
    "count": 0,
-   "url": "https://www.capitalfund.com.tw/etf/product/detail/500/basic",
-   "error": "RuntimeError: 頁面上找不到符合持股明細特徵的表格"
+   "url": null,
+   "error": "RuntimeError: 找不到該ETF的官網頁面（探索失敗）"
   }
  ]
 }
