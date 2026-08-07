@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-06 00:26",
+ "generated_at": "2026-08-07 19:16",
  "demo": false,
  "funds": [
   {
@@ -13,168 +13,175 @@
      "code": "2330",
      "name": "台積電",
      "shares": 12134000.0,
-     "weight": 9.5,
+     "weight": 9.63,
      "cash_like": false
     },
     {
      "code": "2383",
      "name": "台光電",
      "shares": 4863000.0,
-     "weight": 8.31,
+     "weight": 8.53,
      "cash_like": false
     },
     {
      "code": "2454",
      "name": "聯發科",
      "shares": 5448000.0,
-     "weight": 7.1,
+     "weight": 7.11,
      "cash_like": false
     },
     {
      "code": "3037",
      "name": "欣興",
      "shares": 20210000.0,
-     "weight": 6.38,
+     "weight": 6.46,
      "cash_like": false
     },
     {
      "code": "6669",
      "name": "緯穎",
      "shares": 2708000.0,
-     "weight": 5.45,
+     "weight": 5.53,
      "cash_like": false
     },
     {
      "code": "3017",
      "name": "奇鋐",
      "shares": 5801000.0,
-     "weight": 5.16,
-     "cash_like": false
-    },
-    {
-     "code": "2345",
-     "name": "智邦",
-     "shares": 6419000.0,
-     "weight": 4.99,
+     "weight": 5.41,
      "cash_like": false
     },
     {
      "code": "6223",
      "name": "旺矽",
      "shares": 2443000.0,
-     "weight": 4.97,
+     "weight": 4.99,
+     "cash_like": false
+    },
+    {
+     "code": "2345",
+     "name": "智邦",
+     "shares": 6419000.0,
+     "weight": 4.76,
      "cash_like": false
     },
     {
      "code": "2327",
      "name": "國巨*",
      "shares": 25437000.0,
-     "weight": 4.79,
+     "weight": 4.6,
      "cash_like": false
     },
     {
-     "code": "3665",
-     "name": "貿聯-KY",
-     "shares": 5130848.0,
-     "weight": 3.94,
-     "cash_like": false
-    },
-    {
-     "code": "2303",
-     "name": "聯電",
-     "shares": 87718000.0,
-     "weight": 3.49,
-     "cash_like": false
-    },
-    {
-     "code": "3711",
-     "name": "日月光投控",
-     "shares": 17439000.0,
-     "weight": 3.37,
+     "code": "2308",
+     "name": "台達電",
+     "shares": 6706000.0,
+     "weight": 3.7,
      "cash_like": false
     },
     {
      "code": "3653",
      "name": "健策",
      "shares": 2375000.0,
-     "weight": 3.36,
+     "weight": 3.48,
      "cash_like": false
     },
     {
      "code": "8046",
      "name": "南電",
      "shares": 9519000.0,
-     "weight": 3.29,
+     "weight": 3.44,
      "cash_like": false
     },
     {
-     "code": "2308",
-     "name": "台達電",
-     "shares": 5932000.0,
-     "weight": 3.19,
+     "code": "3711",
+     "name": "日月光投控",
+     "shares": 17439000.0,
+     "weight": 3.42,
+     "cash_like": false
+    },
+    {
+     "code": "2303",
+     "name": "聯電",
+     "shares": 87718000.0,
+     "weight": 3.41,
+     "cash_like": false
+    },
+    {
+     "code": "3665",
+     "name": "貿聯-KY",
+     "shares": 4616848.0,
+     "weight": 3.4,
      "cash_like": false
     },
     {
      "code": "6274",
      "name": "台燿",
      "shares": 5499000.0,
-     "weight": 2.63,
+     "weight": 2.65,
      "cash_like": false
     },
     {
      "code": "5274",
      "name": "信驊",
      "shares": 454900.0,
-     "weight": 2.37,
+     "weight": 2.49,
      "cash_like": false
     },
     {
      "code": "2368",
      "name": "金像電",
-     "shares": 5556000.0,
-     "weight": 1.7,
+     "shares": 5000000.0,
+     "weight": 1.64,
      "cash_like": false
     },
     {
      "code": "6805",
      "name": "富世達",
-     "shares": 1957000.0,
-     "weight": 1.02,
+     "shares": 2053000.0,
+     "weight": 1.15,
+     "cash_like": false
+    },
+    {
+     "code": "8210",
+     "name": "勤誠",
+     "shares": 2497000.0,
+     "weight": 0.93,
      "cash_like": false
     },
     {
      "code": "2449",
      "name": "京元電子",
      "shares": 11295450.0,
-     "weight": 0.91,
-     "cash_like": false
-    },
-    {
-     "code": "8210",
-     "name": "勤誠",
-     "shares": 2297000.0,
-     "weight": 0.88,
+     "weight": 0.92,
      "cash_like": false
     },
     {
      "code": "6187",
      "name": "萬潤",
      "shares": 1334000.0,
-     "weight": 0.46,
+     "weight": 0.5,
+     "cash_like": false
+    },
+    {
+     "code": "2360",
+     "name": "致茂",
+     "shares": 572000.0,
+     "weight": 0.39,
      "cash_like": false
     },
     {
      "code": "4979",
      "name": "華星光",
      "shares": 1874000.0,
-     "weight": 0.3,
+     "weight": 0.31,
      "cash_like": false
     },
     {
-     "code": "2360",
-     "name": "致茂",
-     "shares": 472000.0,
-     "weight": 0.29,
+     "code": "1590",
+     "name": "亞德客-KY",
+     "shares": 528000.0,
+     "weight": 0.27,
      "cash_like": false
     },
     {
@@ -185,38 +192,24 @@
      "cash_like": false
     },
     {
-     "code": "1590",
-     "name": "亞德客-KY",
-     "shares": 528000.0,
-     "weight": 0.26,
-     "cash_like": false
-    },
-    {
      "code": "8996",
      "name": "高力",
      "shares": 712000.0,
-     "weight": 0.24,
+     "weight": 0.25,
      "cash_like": false
     },
     {
      "code": "6510",
      "name": "精測",
      "shares": 261000.0,
-     "weight": 0.23,
-     "cash_like": false
-    },
-    {
-     "code": "6515",
-     "name": "穎崴",
-     "shares": 93000.0,
-     "weight": 0.21,
+     "weight": 0.24,
      "cash_like": false
     },
     {
      "code": "6278",
      "name": "台表科",
      "shares": 3250000.0,
-     "weight": 0.18,
+     "weight": 0.17,
      "cash_like": false
     },
     {
@@ -234,16 +227,16 @@
      "cash_like": false
     },
     {
-     "code": "2049",
-     "name": "上銀",
-     "shares": 1080000.0,
-     "weight": 0.13,
-     "cash_like": false
-    },
-    {
      "code": "6191",
      "name": "精成科",
      "shares": 3988000.0,
+     "weight": 0.11,
+     "cash_like": false
+    },
+    {
+     "code": "3376",
+     "name": "新日興",
+     "shares": 1741000.0,
      "weight": 0.11,
      "cash_like": false
     },
@@ -255,10 +248,10 @@
      "cash_like": false
     },
     {
-     "code": "3376",
-     "name": "新日興",
-     "shares": 1741000.0,
-     "weight": 0.1,
+     "code": "6515",
+     "name": "穎崴",
+     "shares": 23000.0,
+     "weight": 0.05,
      "cash_like": false
     },
     {
@@ -304,76 +297,76 @@
    "name": "主動復華未來50",
    "issuer": "復華投信",
    "status": "ok",
-   "data_date": "2026-08-05",
+   "data_date": "2026-08-07",
    "holdings": [
     {
      "code": "2330",
      "name": "台灣積體",
-     "shares": 5400000.0,
-     "weight": 14.638,
+     "shares": 5200000.0,
+     "weight": 14.115,
      "cash_like": false
     },
     {
      "code": "2383",
      "name": "台光電子",
      "shares": 1430000.0,
-     "weight": 8.454,
+     "weight": 8.582,
      "cash_like": false
     },
     {
      "code": "2408",
      "name": "南亞科技",
      "shares": 14000000.0,
-     "weight": 7.022,
-     "cash_like": false
-    },
-    {
-     "code": "3037",
-     "name": "欣興電子",
-     "shares": 5000000.0,
-     "weight": 5.461,
+     "weight": 7.328,
      "cash_like": false
     },
     {
      "code": "2059",
      "name": "川湖科技",
      "shares": 500000.0,
-     "weight": 5.337,
+     "weight": 6.362,
+     "cash_like": false
+    },
+    {
+     "code": "3037",
+     "name": "欣興電子",
+     "shares": 5000000.0,
+     "weight": 5.469,
      "cash_like": false
     },
     {
      "code": "2454",
      "name": "聯發科技",
      "shares": 1150000.0,
-     "weight": 5.185,
+     "weight": 5.137,
      "cash_like": false
     },
     {
      "code": "6223",
      "name": "旺矽科技",
      "shares": 720000.0,
-     "weight": 5.068,
+     "weight": 5.03,
      "cash_like": false
     },
     {
      "code": "2327",
      "name": "國巨股份",
      "shares": 7700000.0,
-     "weight": 5.016,
+     "weight": 4.762,
      "cash_like": false
     },
     {
      "code": "2345",
      "name": "智邦科技",
      "shares": 1800000.0,
-     "weight": 4.839,
+     "weight": 4.566,
      "cash_like": false
     },
     {
      "code": "6669",
      "name": "緯穎科技",
      "shares": 570000.0,
-     "weight": 3.967,
+     "weight": 3.982,
      "cash_like": false
     }
    ],
@@ -421,70 +414,70 @@
      "code": "2330",
      "name": "台灣積體電路製造",
      "shares": 588000.0,
-     "weight": 14.05,
-     "cash_like": false
-    },
-    {
-     "code": "2059",
-     "name": "川湖科技",
-     "shares": 50000.0,
-     "weight": 4.71,
+     "weight": 13.87,
      "cash_like": false
     },
     {
      "code": "2027",
      "name": "大成不銹鋼工業",
      "shares": 10341000.0,
-     "weight": 4.56,
+     "weight": 4.8,
+     "cash_like": false
+    },
+    {
+     "code": "4904",
+     "name": "遠傳電信",
+     "shares": 3474000.0,
+     "weight": 3.56,
+     "cash_like": false
+    },
+    {
+     "code": "2412",
+     "name": "中華電信",
+     "shares": 2587000.0,
+     "weight": 3.54,
      "cash_like": false
     },
     {
      "code": "2376",
      "name": "技嘉科技",
-     "shares": 1170000.0,
-     "weight": 3.98,
-     "cash_like": false
-    },
-    {
-     "code": "3008",
-     "name": "大立光電",
-     "shares": 81000.0,
-     "weight": 3.68,
-     "cash_like": false
-    },
-    {
-     "code": "6442",
-     "name": "光紅建聖",
-     "shares": 255000.0,
-     "weight": 3.47,
-     "cash_like": false
-    },
-    {
-     "code": "2327",
-     "name": "國巨",
-     "shares": 600000.0,
-     "weight": 3.45,
+     "shares": 1015000.0,
+     "weight": 3.48,
      "cash_like": false
     },
     {
      "code": "6187",
      "name": "萬潤科技",
-     "shares": 319000.0,
-     "weight": 3.39,
+     "shares": 261000.0,
+     "weight": 2.94,
      "cash_like": false
     },
     {
-     "code": "2408",
-     "name": "南亞科技",
-     "shares": 671000.0,
-     "weight": 2.97,
+     "code": "2059",
+     "name": "川湖科技",
+     "shares": 25000.0,
+     "weight": 2.76,
      "cash_like": false
     },
     {
      "code": "2345",
      "name": "智邦科技",
      "shares": 124000.0,
-     "weight": 2.94,
+     "weight": 2.73,
+     "cash_like": false
+    },
+    {
+     "code": "2383",
+     "name": "台光電子材料",
+     "shares": 52000.0,
+     "weight": 2.71,
+     "cash_like": false
+    },
+    {
+     "code": "6669",
+     "name": "緯穎科技服務",
+     "shares": 43000.0,
+     "weight": 2.61,
      "cash_like": false
     }
    ],
