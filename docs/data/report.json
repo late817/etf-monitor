@@ -1,6 +1,6 @@
 {
- "run_at": "2026-08-17 18:57",
- "summary": "3/10 檔成功",
+ "run_at": "2026-08-18 18:55",
+ "summary": "4/10 檔成功",
  "details": [
   {
    "etf": "00981A",
@@ -33,7 +33,7 @@
    "etf": "00991A",
    "issuer": "復華投信",
    "status": "ok",
-   "data_date": "2026-08-17",
+   "data_date": "2026-08-18",
    "count": 10,
    "url": "https://www.fhtrust.com.tw/ETF/etf_detail/ETF23",
    "error": null
@@ -59,11 +59,11 @@
   {
    "etf": "00980A",
    "issuer": "野村投信",
-   "status": "error",
+   "status": "ok",
    "data_date": null,
-   "count": 0,
+   "count": 10,
    "url": "https://www.nomurafunds.com.tw/ETFWEB/product-description?fundNo=00980A&tab=Shareholding",
-   "error": "RuntimeError: 頁面上找不到符合持股明細特徵的表格"
+   "error": null
   },
   {
    "etf": "00985A",
