@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-25 23:25",
+ "generated_at": "2026-09-29 02:15",
  "demo": false,
  "funds": [
   {
@@ -268,7 +268,7 @@
    "etf": "00991A",
    "name": "主動復華未來50",
    "issuer": "復華投信",
-   "status": "ok",
+   "status": "stale",
    "data_date": "2026-09-24",
    "holdings": [
     {

@@ -1,6 +1,6 @@
 {
- "run_at": "2026-09-25 23:25",
- "summary": "4/10 檔成功",
+ "run_at": "2026-09-29 02:15",
+ "summary": "3/10 檔成功",
  "details": [
   {
    "etf": "00981A",
@@ -32,7 +32,7 @@
   {
    "etf": "00991A",
    "issuer": "復華投信",
-   "status": "ok",
+   "status": "stale",
    "data_date": "2026-09-24",
    "count": 10,
    "url": "https://www.fhtrust.com.tw/ETF/etf_detail/ETF23",
