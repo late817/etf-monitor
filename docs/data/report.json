@@ -1,5 +1,5 @@
 {
- "run_at": "2026-10-01 00:31",
+ "run_at": "2026-10-02 01:08",
  "summary": "4/10 檔成功",
  "details": [
   {
@@ -17,7 +17,7 @@
    "status": "error",
    "data_date": null,
    "count": 0,
-   "url": "https://www.ezmoney.com.tw/ETF/News/Info/14684?tid=101",
+   "url": "https://www.ezmoney.com.tw/ETF/News/Info/15009?tid=101",
    "error": "RuntimeError: 頁面上找不到符合持股明細特徵的表格"
   },
   {
@@ -33,7 +33,7 @@
    "etf": "00991A",
    "issuer": "復華投信",
    "status": "ok",
-   "data_date": "2026-09-30",
+   "data_date": "2026-10-01",
    "count": 10,
    "url": "https://www.fhtrust.com.tw/ETF/etf_detail/ETF23",
    "error": null
