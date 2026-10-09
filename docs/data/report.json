@@ -1,5 +1,5 @@
 {
- "run_at": "2026-10-09 01:30",
+ "run_at": "2026-10-10 01:08",
  "summary": "3/10 檔成功",
  "details": [
   {
@@ -89,8 +89,8 @@
    "status": "error",
    "data_date": null,
    "count": 0,
-   "url": null,
-   "error": "RuntimeError: 找不到該ETF的官網頁面（探索失敗）"
+   "url": "https://www.capitalfund.com.tw/etf/product/detail/500/basic",
+   "error": "RuntimeError: 頁面上找不到符合持股明細特徵的表格"
   }
  ]
 }

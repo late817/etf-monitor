@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-09 01:30",
+ "generated_at": "2026-10-10 01:08",
  "demo": false,
  "funds": [
   {
@@ -459,8 +459,8 @@
    "status": "error",
    "data_date": null,
    "holdings": [],
-   "source_url": null,
-   "error": "RuntimeError: 找不到該ETF的官網頁面（探索失敗）"
+   "source_url": "https://www.capitalfund.com.tw/etf/product/detail/500/basic",
+   "error": "RuntimeError: 頁面上找不到符合持股明細特徵的表格"
   }
  ]
 }
